@@ -11,9 +11,8 @@ Replace the usual prusti header:
 extern crate prusti_contracts;
 use prusti_contracts::*;
 ```
-with:
+with just:
 ```
-extern crate prusti_polyfill;
 prusti_polyfill::prusti_polyfill_init!();
 ```
 Also, your Cargo.toml must have prusti-polyfill as a dependency (through git for now), and have a verified feature in your Cargo.toml, as in
