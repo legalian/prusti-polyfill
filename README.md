@@ -19,8 +19,8 @@ default = []
 verified = []
 ```
 Then, when you compile, you can either do:
-```cargo-prusti --features verified``` To verify using prusti, or
-```cargo build``` To build, with no prusti needed.
+```cargo-prusti --features verified``` to verify using prusti, or
+```cargo build``` to build, with no prusti needed.
 
 
 ## Motivation:
@@ -28,6 +28,8 @@ I'm starting a different project that I intend to be written in rust and be comp
 
 
 ## Other:
+I appreciate feedback- If there are better ways to do this, or if parts of this project are unnessecary.
+
 Here's the function I use to run prusti. I'm on an M1 mac, and the architecture difference gives me difficulty building from source or using the precompiled binaries, so I use the docker container. This isn't really related to this package, per se, but I'm hoping someone will see it and it will benefit them. It handles mounting the volumes for the docker container, preserves coloring, and filters out SLF4J warnings.
 ```
 cargoprusti () {
@@ -44,8 +46,6 @@ cargoprusti () {
 		2>&1 | egrep -v SLF4J:
 }
 ```
-
-I appreciate feedback- If there are better ways to do this, or if parts of this project are unnessecary.
 
 
 
