@@ -9,7 +9,9 @@ return "
 	#[cfg(feature = \"verified\")]
 	extern crate prusti_contracts;
 	#[cfg(feature = \"verified\")]
-	use prusti_contracts::trusted;
+	use prusti_contracts::*;
+	#[cfg(not(feature = \"verified\"))]
+	use prusti_polyfill::*;
 ".parse().unwrap();
 }
 
