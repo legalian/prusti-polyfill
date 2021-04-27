@@ -1,6 +1,8 @@
 # prusti-polyfill
 A polyfill crate that allows people to compile your project with vanilla cargo, even though you use prusti macros/directives.
 
+More specifically, things like #[trusted] will be defined as do-nothing macros unless ```--features verified``` is supplied to the build command, in which case it will refer to the appropriate prusti macro.
+
 ## Usage:
 Replace the usual prusti header:
 ```
