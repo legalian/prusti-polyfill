@@ -24,7 +24,7 @@ Then, when you compile, you can either do:
 
 
 ## Motivation:
-I'm starting a different project that I intend to be written in rust and be completely verified with prusti. However, I want my project to be able to be compiled either as a dependency or simply run by other developers without needing them to have prusti installed and configured. It's different from a normal dependency that can be simply included in the Cargo.toml file.
+I'm starting a different project that I intend to be written in rust and be completely verified with prusti. However, I want my project to be able to be compiled either as a dependency or simply run by other developers without needing them to have prusti installed and configured. Prusti can't be added as a dependency like a crate.
 
 
 ## Other:
