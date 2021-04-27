@@ -3,6 +3,8 @@ A polyfill crate that allows people to compile your project with vanilla cargo, 
 
 More specifically, things like #[trusted] will be defined as do-nothing macros unless ```--features verified``` is supplied to the build command, in which case it will refer to the appropriate prusti macro.
 
+If you can think of better ways to do this, I appreciate feedback.
+
 ## Usage:
 Replace the usual prusti header:
 ```
@@ -30,8 +32,6 @@ I'm starting a different project that I intend to be written in rust and be comp
 
 
 ## Other:
-I appreciate feedback- If there are better ways to do this, or if parts of this project are unnessecary.
-
 Here's the function I use to run prusti. I'm on an M1 mac, and the architecture difference gives me difficulty building from source or using the precompiled binaries, so I use the docker container. This isn't really related to this package, per se, but I'm hoping someone will see it and it will benefit them. It handles mounting the volumes for the docker container, preserves coloring, and filters out SLF4J warnings.
 ```
 cargoprusti () {
