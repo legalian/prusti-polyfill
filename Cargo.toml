@@ -3,10 +3,10 @@ name = "prusti-polyfill"
 version = "0.1.0"
 authors = ["Parker Lawrence <liverspleenkidney@gmail.com>"]
 edition = "2018"
-path = "src/lib.rs"
-crate-type = ["proc-macro"]
-[dependencies]
 
+[dependencies]
+syn = "1.0"
+quote = "1.0"
 
 [lib]
 proc-macro = true
