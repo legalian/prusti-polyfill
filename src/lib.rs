@@ -14,6 +14,7 @@ pub fn prusti_polyfill_init(_item: TokenStream) -> TokenStream {
 #[cfg(not(feature = "verified"))]
 #[proc_macro_attribute]
 pub fn trusted(_attr: TokenStream, item: TokenStream) -> TokenStream {
+	println!("trusting!");
     return item;
 }
 
